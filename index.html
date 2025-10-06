@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>REST Countries - Home</title>
+    <meta name="description"
+        content="Browse and search countries of the world. Filter by region and view detailed info like population, capital, languages, and toggle light/dark themes." />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header" role="banner" aria-label="Main header">
+        <div class="container header-inner">
+            <h1 class="logo">Where in the world?</h1>
+            <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">🌙
+                Dark</button>
+        </div>
+    </header>
+
+    <main id="main" class="container" role="main">
+        <section class="controls">
+            <div role="region" aria-label="Search and filter" style="display:flex;gap:.5rem;flex:1;align-items:center">
+                <input id="search" class="search" type="search" placeholder="Search for a country..."
+                    aria-label="Search for a country" aria-controls="countries" />
+                <button id="clear-search" aria-label="Clear search" title="Clear" style="display:none">✖</button>
+            </div>
+
+            <select id="region-filter" class="region-filter" aria-label="Filter by Region">
+                <option value="all">Filter by Region</option>
+            </select>
+            <div id="results-count" style="margin-left:1rem;color:var(--input);align-self:center">&nbsp;</div>
+        </section>
+
+        <section id="countries" class="countries" aria-live="polite">
+            <!-- country cards inserted here -->
+        </section>
+
+        <div id="no-results" class="no-results" hidden role="status">No countries match your search.</div>
+    </main>
+
+    <script src="./js/script.js" defer></script>
+</body>
+
+</html>

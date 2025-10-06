@@ -1,0 +1,8 @@
+{
+  "name": "rest-countries-local",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "smoke": "node ./scripts/smoke.js"
+  }
+}
